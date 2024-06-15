@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+ <header>
+    <nav>
+        
+        <button onclick="menuMobile()" class="bt-menu-mobile">
+            <img class="img" src="menu.png" >
+        </button>
+          
+        <div class="logo">
+            <a href="">
+                <img src="img/logo.svg">
+            </a>
+        </div>
+       
+        <ul class="nav-bar">
+            <li>
+                <a href="">ENCONTRAR UMA VIATURA</a>
+            </li>
+            <li>
+                <a href="">CAMPANHAS</a>
+            </li>
+            <li>
+                <a href="">COMERCIAIS USADOS</a>
+            </li>
+            <li>
+                <a href="">ELÉTRICOS E HIBRIDOS USADOS</a>
+            </li>
+            <li>
+                <a href="">RETOMA</a>
+            </li>
+            <li>
+                <a href="">OS NOSSOS PONTOS DE VENDA</a>
+            </li>
+            <li>
+                <a href="">QUEM SOMOS</a>
+            </li>
+            <li>
+                <a href="">VÍDEOS</a>
+            </li>
+            <li>
+                <a href="">GUIA DO COMPRADOS</a>
+            </li>
+            <li class="minha-selecao">
+                <a onclick="mSelecao()" class="bt-selecao">A MINHA SELEÇÃO</a>
+            </li>
+        </ul>
+        <div class="mobile-mSelect">
+            <img onclick="mSelecao()" class="img" src="user.png">
+        </div>
+        
+        
+    </nav>
+    <div class="slideshow-container">
+        <div id="bt-ap" class="areaPessoal">
+            <div class="areaPessoal-header">
+                <span class="bi-person"></span>
+                <span>A MINHA SELEÇÃO</span>
+                <button type="button" class="areaPessoal-close">
+                    <span onclick="mSelecao()" class="bi-x"></span>
+                </button>
+            </div>
+            <div class="areaPessoal-conta">
+                <div class="areaPessoal-aceder">
+                    <p>Conta MySpoticar</p>
+                    <a href="">aceder</a>
+                </div>
+                <div class="areaPessoal-criarConta">
+                    <p>Não possui uma conta?</p>
+                    <a href="">criar uma conta</a>
+                </div>
+                <span class="bi-person"></span>
+            </div>
+            <div class="areaPessoal-selecao">
+                <div class="areaPessoal-selecaoTexto">
+                    <p>A minha seleção</p>
+                    <p>Nenhuma viatura</p>
+                </div>
+                <div class="areaPessoal-selecaoContador">
+                    <p>0</p>
+                </div>
+            </div>
+            <div class="areaPessoal-footer">
+                <div class="areaPessoal-footerTexto">
+                    <p>A minha viatura</p>
+                    <a href="">Avaliar a minha viatura</a>
+                </div>
+                <div class="areaPessoal-footerTexto2">
+                    Peça a avaliação de retoma da sua viatura e beneficie de várias vantagens
+                </div>
+            </div>
+            
+        </div>
+    </div>
+ </header>
+
+    <div class="comunicacao">
+     <a href="">
+     <img src="img/banner_desktop_marcas.jpg" width="100%">
+     </a>
+    </div>
+
+    <!-- Avaliação veículo -->
+    <div class="financiamento">
+        <div class="financiamento-container">
+            <h2>Preço do automóvel</h2>
+            <div class="financiamento-valores">
+                <div class="financiamento-marca">
+                    <p>Marca</p>
+                    <input class="automovel-marca" type="text" placeholder="Marca" id="palavra1">
+                </div>
+                <div class="financiamento-modelo">
+                    <p>Modelo</p>
+                    <input class="automovel-modelo" type="text" placeholder="Modelo" id="palavra2">
+                </div>
+                <div class="financiamento-1">
+                    <p>Preço aquisição</p>
+                    <input class="preço_aquisição" type="number" id="1valor" placeholder="Preço aquisição" required>
+                </div>
+                <div class="financiamento-2">
+                    <p>Ano da matricula</p>
+                    <input class="anoDa_matricula" type="number" id="2valor" placeholder="Ano matricula" required>
+                    <div class="financiamento-4">
+                    <p>Quilometragem</p>
+                    <input class="Quilometragem" type="number" id="3valor" placeholder="Quilometragem" required>
+                </div>
+            </div>
+            <br>
+            <button class="calcularvalorfinal" onclick="calcula()">Calcular</button>
+            <div class="financiamento_calculo">
+                <div class="financiamento-calculo">
+                    <br>
+                    <div id="preço_final">
+                        Preço final 
+                    </div>
+                    <span id="valorFinal"></span><br />
+                </div>
+            </div>
+            <div class="estados">
+                <div class="mau-estado">
+                    <br>
+                    <p>Mau estado</p>
+                    <span id="mau-estado"></span>
+                    <div id="nome-marca"></div>
+                    <div id="nome-modelo"></div>
+                </div>
+                <div class="bom-estado">
+                    <br>
+                    <p>Bom estado</p>
+                    <span id="bom-estado"></span>
+                    <span id="nome-marca1"></span>
+                    <span id="nome-modelo1"></span>
+                </div>
+                <div class="muito-bom-estado">
+                    <br>
+                    <p>Muito Bom estado</p>
+                    <span id="muito-bom-estado"></span>
+                    <span id="nome-marca2"></span>
+                    <span id="nome-modelo2"></span>
+                </div>
+            </div>  
+        </div>
+  
+    </div>
+        <div class="dinheiro">
+        <div class="dinheiro-container">
+            <h2>Financiamento</h2>
+            <div class="dinheiro-2">
+                <p>Valor empréstimo</p>
+                <input type="number" id="v-emprestimo" placeholder="Valor do empréstimo" required>
+            </div>
+            <div class="dinheiro-3">
+                <p>Duração (Meses)</p>
+                <input type="number" id="v-duracao" placeholder="Duração empréstimo (Meses)" required>
+            </div>
+            <div class="dinheiro-6">
+                <p>Valor da entrada inicial</p>
+                <input type="number" id="v-inicial" placeholder="Valor do automóvel" required>
+            </div>
+            <div id="dinheiro-info" style="display: none">
+                <div class="opcao1">Opção 1
+            <div class="dinheiro-4">
+                <p>Taxa de juro</p>
+                <span id="financiamentoTaxaJuro1"></span><br />
+            </div>
+            <div class="dinheiro-5">
+                <p>Spread</p>
+                <span id="financiamentoSpread1"></span><br />
+            </div>
+            
+            <div class="dinheiro-7">
+                <p>Valor mensal da prestação</p>
+                <span id="financiamentoValorMensal1"></span><br />
+            </div>
+                </div>
+                <div class="opcao1">Opção 2
+                    <div class="dinheiro-4">
+                        <p>Taxa de juro</p>
+                        <span id="financiamentoTaxaJuro2"></span><br />
+                    </div>
+                    <div class="dinheiro-5">
+                        <p>Spread</p>
+                        <span id="financiamentoSpread2"></span><br />
+                    </div>
+                    
+                    <div class="dinheiro-7">
+                        <p>Valor mensal da prestação</p>
+                        <span id="financiamentoValorMensal2"></span><br />
+                    </div>
+                        </div>
+                <div class="opcao1">Opção 3
+                    <div class="dinheiro-4">
+                        <p>Taxa de juro</p>
+                        <span id="financiamentoTaxaJuro3"></span><br />
+                    </div>
+                    <div class="dinheiro-5">
+                        <p>Spread</p>
+                        <span id="financiamentoSpread3"></span><br />
+                    </div>
+                    <div class="dinheiro-7">
+                        <p>Valor mensal da prestação</p>
+                        <span id="financiamentoValorMensal3"></span><br />
+                    </div>
+                </div>
+        </div>
+        <div class="botaoFinanciamento">
+            <button class="calcularFinanciamento" onclick="financiamento()">Financiamento</button>
+        </div>
+        </div>
+    </div>
+    <footer>
+        <div class="todasasmarcas">
+             <p class="titulomarcas">MARCAS</p>
+           <div class="marcascima">
+             <ul>
+                 <li>
+                     <a onclick="openWeb();" >
+                         <p id="titulos" class="buttonopelusados">
+                             OPEL USADOS
+                             <span class="icon-button17"></span>
+                             <span class="boxIcon2 Icon2">
+                                 <span class="square2"></span>
+                                 <span class="square2"></span>
+                                 <span class="square2"></span>
+                                 <span class="square2"></span>
+                                 <span class="square2"></span>
+                                 <span class="square2"></span>
+                                 <span class="square2"></span>
+                                 <span class="square2"></span>
+                                 <span class="square2"></span>
+                             </span>
+                         </p> 
+                     </a>
+                 </li>
+                   <div class="dropdown_menu17 hide17">
+                     <li><a href=" ">Corsa</a></li>
+                     <li><a href=" ">Astra</a></li>
+                     <li><a href=" ">Grandland</a></li>
+                     <li><a href=" ">Crossland</a></li>
+                     <li><a href=" ">Insignia</a></li>
+                     <li><a href=" ">Mokka</a></li>
+                   <div class="dropdown_menu5 hide5" >
+                     <li class="footer-list-item"><a href=" ">Zafira</a></li>
+                     <li class="footer-list-item"><a href=" ">Combo</a></li>
+                     <li class="footer-list-item"><a href=" ">Adam</a></li>
+                     <li class="footer-list-item"><a href=" ">Karl</a></li>
+                     <li class="footer-list-item"><a href=" ">VIVARO</a></li>
+                   </div>
+                   </div>
+                 
+                     <a class="dropdown_outros5">Outros Modelos<span class="icon-button5 drop-rotate5"></span></a> 
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos" class="buttoncitroenusados">
+                             CITRÖEN USADOS
+                             <span class="icon-button16"></span>
+                             <span class="boxIcon3 Icon3">
+                                 <span class="square3"></span>
+                                 <span class="square3"></span>
+                                 <span class="square3"></span>
+                                 <span class="square3"></span>
+                                 <span class="square3"></span>
+                                 <span class="square3"></span>
+                                 <span class="square3"></span>
+                                 <span class="square3"></span>
+                                 <span class="square3"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu16 hide16">
+                     <li><a href=" ">C4</a></li>
+                     <li><a href=" ">C5 Aircross</a></li>
+                     <li><a href=" ">C3</a></li>
+                     <li><a href=" ">C3 Aircross</a></li>
+                     <li><a href=" ">C4 Cactus</a></li>
+                     <li><a href=" ">C4 Grand SpaceTourer</a></li>
+                  <div class="dropdown_menu4 hide4" >
+                     <li class="footer-list-item"><a href=" ">Berlingo</a></li>
+                     <li class="footer-list-item"><a href=" ">C1</a></li>
+                     <li class="footer-list-item"><a href=" ">C5</a></li>
+                     <li class="footer-list-item"><a href=" ">C-Elysee</a></li>
+                     <li class="footer-list-item"><a href=" ">C4 Aircross</a></li>
+                     <li class="footer-list-item"><a href=" ">C4 SpaceTourer</a></li>
+                  </div>
+                 </div>
+                     <a class="dropdown_outros4">Outros Modelos<span class="icon-button4 drop-rotate4"></span></a>
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos"class="buttonpeugeotusados"> 
+                               PEUGEOT USADOS
+                             <span class="icon-button15"></span>
+                             <span class="boxIcon4 Icon4">
+                                 <span class="square4"></span>
+                                 <span class="square4"></span>
+                                 <span class="square4"></span>
+                                 <span class="square4"></span>
+                                 <span class="square4"></span>
+                                 <span class="square4"></span>
+                                 <span class="square4"></span>
+                                 <span class="square4"></span>
+                                 <span class="square4"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu15 hide15">
+                     <li><a href=" ">308</a></li>
+                     <li><a href=" ">208</a></li>
+                     <li><a href=" ">2008</a></li>
+                     <li><a href=" ">3008</a></li>
+                     <li><a href=" ">108</a></li>
+                     <li><a href=" ">508</a></li>
+                  <div class="dropdown_menu3 hide3" >
+                     <li class="footer-list-item"><a href=" ">5008</a></li>
+                     <li class="footer-list-item"><a href=" ">Partner</a></li>
+                     <li class="footer-list-item"><a href=" ">Boxer</a></li>
+                     <li class="footer-list-item"><a href=" ">Fiorino</a></li>
+                  </div>
+                 </div>
+                     <a class="dropdown_outros3">Outros Modelos<span class="icon-button3 drop-rotate3"></span></a>
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();" >
+                         <p id="titulos" class="buttondsautomobilesusados">
+                               DS AUTOMOBILES USADOS
+                             <span class="icon-button14"></span>
+                             <span class="boxIcon5 Icon5">
+                                 <span class="square5"></span>
+                                 <span class="square5"></span>
+                                 <span class="square5"></span>
+                                 <span class="square5"></span>
+                                 <span class="square5"></span>
+                                 <span class="square5"></span>
+                                 <span class="square5"></span>
+                                 <span class="square5"></span>
+                                 <span class="square5"></span>
+                             </span>
+                         </p>
+                     </a>
+               </li>
+               <div class="dropdown_menu14 hide14">
+                 <li><a href=" ">DS 7 Crossback</a></li>
+                 <li><a href=" ">DS 3 Crossback</a></li>
+                 <li><a href=" ">DS 9</a></li>
+               </div>
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos"class="buttonfiatusados">
+                               FIAT USADOS
+                             <span class="icon-button13"></span>
+                             <span class="boxIcon6 Icon6">
+                                 <span class="square6"></span>
+                                 <span class="square6"></span>
+                                 <span class="square6"></span>
+                                 <span class="square6"></span>
+                                 <span class="square6"></span>
+                                 <span class="square6"></span>
+                                 <span class="square6"></span>
+                                 <span class="square6"></span>
+                                 <span class="square6"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu13 hide13">
+                     <li><a href=" ">500</a></li>
+                     <li><a href=" ">Tipo</a></li>
+                     <li><a href=" ">500X</a></li>
+                     <li><a href=" ">Punto</a></li>
+                     <li><a href=" ">Doblo</a></li>
+                     <li><a href=" ">Panda</a></li>
+                  <div class="dropdown_menu2 hide2" >
+                     <li class="footer-list-item"><a href=" ">500L</a></li>
+                     <li class="footer-list-item"><a href=" ">Talento</a></li>
+                     <li class="footer-list-item"><a href=" ">Ducato</a></li>
+                     <li class="footer-list-item"><a href=" ">Fiorino</a></li>
+                  </div>
+                 </div>
+                     <a class="dropdown_outros2">Outros Modelos<span class="icon-button2 drop-rotate2"></span></a>
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos"class="buttonvolkswagen">
+                               VOLKSWAGEN
+                             <span class="icon-button12"></span>
+                             <span class="boxIcon7 Icon7">
+                                 <span class="square7"></span>
+                                 <span class="square7"></span>
+                                 <span class="square7"></span>
+                                 <span class="square7"></span>
+                                 <span class="square7"></span>
+                                 <span class="square7"></span>
+                                 <span class="square7"></span>
+                                 <span class="square7"></span>
+                                 <span class="square7"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu12 hide12">
+                     <a class="semresultados">Sem resultados</a>
+                 </div>
+             </ul>
+         
+         </div>
+         <div class="marcasbaixo">
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos"class="buttonrenault">
+                               RENAULT
+                             <span class="icon-button11"></span>
+                             <span class="boxIcon8 Icon8">
+                                 <span class="square8"></span>
+                                 <span class="square8"></span>
+                                 <span class="square8"></span>
+                                 <span class="square8"></span>
+                                 <span class="square8"></span>
+                                 <span class="square8"></span>
+                                 <span class="square8"></span>
+                                 <span class="square8"></span>
+                                 <span class="square8"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu11 hide11">
+                     <li><a href=" ">Grand Scenic</a></li>
+                     <li><a href=" ">Captur</a></li>
+                     <li><a href=" ">Clio</a></li>
+                     <li><a href=" ">Kadjer</a></li>
+                     <li><a href=" ">Megane</a></li>
+                     <li><a href=" ">Scenic</a></li>
+                 </div>
+     
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos"class="buttonnissan">
+                               NISSAN
+                             <span class="icon-button10"></span>
+                             <span class="boxIcon9 Icon9">
+                                 <span class="square9"></span>
+                                 <span class="square9"></span>
+                                 <span class="square9"></span>
+                                 <span class="square9"></span>
+                                 <span class="square9"></span>
+                                 <span class="square9"></span>
+                                 <span class="square9"></span>
+                                 <span class="square9"></span>
+                                 <span class="square9"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu10 hide10">
+                    <li><a href=" ">Qashqai</a></li>
+                    <li><a href=" ">Juke</a></li>
+                    <li><a href=" ">X-Trail</a></li>
+                 </div>
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos"class="buttonkia">
+                             KIA
+                             <span class="icon-button9"></span>
+                             <span class="boxIcon10 Icon10">
+                                 <span class="square10"></span>
+                                 <span class="square10"></span>
+                                 <span class="square10"></span>
+                                 <span class="square10"></span>
+                                 <span class="square10"></span>
+                                 <span class="square10"></span>
+                                 <span class="square10"></span>
+                                 <span class="square10"></span>
+                                 <span class="square10"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu9 hide9">
+                    <li><a href=" ">Cee'D</a></li>
+                    <li><a href=" ">Sportage</a></li>
+                    <li><a href=" ">Carens</a></li>
+                    <li><a href=" ">Niro</a></li>
+                    <li><a href=" ">Picento</a></li>
+                    <li><a href=" ">Rio</a></li>
+                    <div class="dropdown_menu1 hide1" >
+                         <li class="footer-list-item"><a href=" ">Stonic</a></li>
+                    </div>
+                 </div>
+                     <a class="dropdown_outros1">Outros Modelos<span class="icon-button1 drop-rotate1"></span></a>
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos"class="buttonford">
+                               FORD
+                             <span class="icon-button8"></span>
+                             <span class="boxIcon11 Icon11">
+                                 <span class="square11"></span>
+                                 <span class="square11"></span>
+                                 <span class="square11"></span>
+                                 <span class="square11"></span>
+                                 <span class="square11"></span>
+                                 <span class="square11"></span>
+                                 <span class="square11"></span>
+                                 <span class="square11"></span>
+                                 <span class="square11"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu8 hide8">
+                     <li><a href=" ">Fiesta</a></li>
+                     <li><a href=" ">Tourneo</a></li>
+                 </div>
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos"class="buttonseat">
+                             SEAT
+                             <span class="icon-button7"></span>
+                             <span class="boxIcon12 Icon12">
+                                 <span class="square12"></span>
+                                 <span class="square12"></span>
+                                 <span class="square12"></span>
+                                 <span class="square12"></span>
+                                 <span class="square12"></span>
+                                 <span class="square12"></span>
+                                 <span class="square12"></span>
+                                 <span class="square12"></span>
+                                 <span class="square12"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu7 hide7">
+                    <li><a href=" ">Leon</a></li>
+                    <li><a href=" ">Ateca</a></li>
+                    <li><a href=" ">Arona</a></li>
+                    <li><a href=" ">Ibiza</a></li>
+                 </div>
+             </ul>
+             <ul>
+                 <li>
+                     <a onclick="openWeb();">
+                         <p id="titulos"class="buttonoutrasmarcas">
+                               OUTRAS MARCAS
+                             <span class="icon-button6"></span>
+                             <span class="boxIcon13 Icon13">
+                                 <span class="square13"></span>
+                                 <span class="square13"></span>
+                                 <span class="square13"></span>
+                                 <span class="square13"></span>
+                                 <span class="square13"></span>
+                                 <span class="square13"></span>
+                                 <span class="square13"></span>
+                                 <span class="square13"></span>
+                                 <span class="square13"></span>
+                             </span>
+                         </p>
+                     </a>
+                 </li>
+                 <div class="dropdown_menu6 hide6">
+                     <li><a href=" ">JEEP</a></li>
+                     <li><a href=" ">HYUNDAI</a></li>
+                     <li><a href=" ">MAZDA</a></li>
+                     <li><a href=" ">MITSUBISHI</a></li>
+                     <li><a href=" ">BMW</a></li>
+                     <li><a href=" ">ALFA ROMEO</a></li>
+                     <div class="dropdown_menu hide" >
+                         <li class="footer-list-item"><a href=" ">MINI</a></li>
+                         <li class="footer-list-item"><a href=" ">TOYOTA</a></li>
+                         <li class="footer-list-item"><a href=" ">ABARTH</a></li>
+                         <li class="footer-list-item"><a href=" ">AUDI</a></li>
+                         <li class="footer-list-item"><a href=" ">BMW</a></li>
+                     </div>
+                 </div>
+                    <button class="dropdown_button">VER TUDO<span class="icon-button drop-rotate"></span></button>
+             </ul>
+         </div>
+         <div class="informação">
+             <ul>
+                 <li><a href=" ">Mapa do site</a></li> 
+                 <li><a href=" ">Mapa do site retoma</a></li> 
+                 <li><a href=" ">DS Certified</a></li>
+                 <li><a href=" ">Opel Usados Certificados</a></li> 
+                 <li><a href=" ">Resolução de litígios</a></li> 
+                 <li><a href=" ">Menções Legais</a></li> 
+                 <li><a href=" ">Consentimento de cookies</a></li> 
+                 <li><a href=" ">Política de Cookies</a></li> 
+                 <li><a href=" ">Política de Privacidade</a></li> 
+             </ul>
+         </div>
+        </div>  
+         <p class="copyright">© 2022 Spoticar. Todos os direitos reservados.</p>
+     </footer>
+</div>
+<script type="text/javascript" src="logica.js"></script>
+</body>
+</html>

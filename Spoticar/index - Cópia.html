@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <nav>
+        
+        <button onclick="menuMobile()" class="bt-menu-mobile">
+            <img class="img" src="menu.png" >
+        </button>
+          
+        <div class="logo">
+            <a href="">
+                <img src="logo.svg">
+            </a>
+        </div>
+       
+        <ul class="nav-bar">
+            <li>
+                <a href="">ENCONTRAR UMA VIATURA</a>
+            </li>
+            <li>
+                <a href="">CAMPANHAS</a>
+            </li>
+            <li>
+                <a href="">COMERCIAIS USADOS</a>
+            </li>
+            <li>
+                <a href="">ELÉTRICOS E HIBRIDOS USADOS</a>
+            </li>
+            <li>
+                <a href="">RETOMA</a>
+            </li>
+            <li>
+                <a href="">OS NOSSOS PONTOS DE VENDA</a>
+            </li>
+            <li>
+                <a href="">QUEM SOMOS</a>
+            </li>
+            <li>
+                <a href="">VÍDEOS</a>
+            </li>
+            <li>
+                <a href="">GUIA DO COMPRADOS</a>
+            </li>
+            <li class="minha-selecao">
+                <a onclick="mSelecao()" class="bt-selecao">A MINHA SELEÇÃO</a>
+            </li>
+        </ul>
+        <div class="mobile-mSelect">
+                <img onclick="mSelecao()" class="img" src="user.png">
+        </div>
+        
+        
+    </nav>
+    
+<div class="slideshow-container">
+
+    <div class="mySlides s1" id="slide1">
+      <img src="Spoticar_Portugal-allbrands_desktop.jpg" style="width:100%">
+      <div class="slide1-inside fade">
+        <div class="slide1-texto">
+            <h1>SPOTICAR</h1>
+            <p>OS CARROS USADOS OFICIAIS DAS REDES ABARTH, CITROËN, FIAT, JEEP, OPEL E PEUGEOT.</p>
+        </div>
+        <div class="slide1-bt">
+            <div class="comprar-bt">
+                <button>COMPRAR</button>
+            </div>
+            <strong>OU</strong>
+            <div class="vender-bt">
+                <button>VENDER</button>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="mySlides" id="slide2">
+      <img src="ap_Spoticar_updates-dezembro_heroshot- homepage_a01_Citroen-C5-Aircross_1650x430 .jpg" style="width:100%;">
+    </div>
+    
+    <div class="mySlides" id="slide3">
+      <img src="ap_Spoticar_updates-dezembro_heroshot- homepage_a01_Fiat_1650x430.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div id="bt-ap" class="areaPessoal">
+        <div class="areaPessoal-header">
+            <span class="bi-person"></span>
+            <span>A MINHA SELEÇÃO</span>
+            <button type="button" class="areaPessoal-close">
+                <span onclick="mSelecao()" class="bi-x"></span>
+            </button>
+        </div>
+        <div class="areaPessoal-conta">
+            <div class="areaPessoal-aceder">
+                <p>Conta MySpoticar</p>
+                <a href="">aceder</a>
+            </div>
+            <div class="areaPessoal-criarConta">
+                <p>Não possui uma conta?</p>
+                <a href="">criar uma conta</a>
+            </div>
+            <span class="bi-person"></span>
+        </div>
+        <div class="areaPessoal-selecao">
+            <div class="areaPessoal-selecaoTexto">
+                <p>A minha seleção</p>
+                <p>Nenhuma viatura</p>
+            </div>
+            <div class="areaPessoal-selecaoContador">
+                <p>0</p>
+            </div>
+        </div>
+        <div class="areaPessoal-footer">
+            <div class="areaPessoal-footerTexto">
+                <p>A minha viatura</p>
+                <a href="">Avaliar a minha viatura</a>
+            </div>
+            <div class="areaPessoal-footerTexto2">
+                Peça a avaliação de retoma da sua viatura e beneficie de várias vantagens
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="pesquisa-container">
+    <div class="pesquisa-detalhes">
+        <ul>
+            <li><a href="">
+                <span>MARCA/MODELO</span>
+                <div class="bi-chevron-compact-down"></div>
+            </a></li>
+            <li><a href="">
+                <span>CATEGORIA</span>
+                <div class="bi-chevron-compact-down"></div>
+            </a></li>
+            <li><a href="">
+                <span>COMBUSTÍVEL</span>
+                <div class="bi-chevron-compact-down"></div>
+            </a</li>
+            <li><a href="">
+                <span>PREÇO</span>
+                <div class="bi-chevron-compact-down"></div>
+            </a></li>
+            <li><a href="">
+                <span>QUILOMETRAGEM</span>
+                <div class="bi-chevron-compact-down"></div>
+            </a></li>
+            <li><a href="">
+                <span>LOCALIZAÇÃO</span>
+                <div class="bi-chevron-compact-down"></div>
+            </a></li>
+            <li><a href="">
+                <span>ANO</span>
+                <div class="bi-chevron-compact-down"></div>
+            </a></li>
+        </ul>
+        <a class="carros-bt" href="">VER OS CARROS USADOS</a>
+        
+    </div>
+    <div class="pesquisa-avancada">
+        <button>PESQUISA AVANÇADA</button>
+        <div class="bi-chevron-right"></div>
+    </div>
+</div>
+<div class="pesquisa-mobile">
+    <p class="encontrar-txt">ENCONTRE O SEU CARRO USADO</p>
+    <a class="bt-pesquisa-rapida" href="">PESQUISA RÁPIDA</a>
+    <a class="bt-pesquisa-avancada" href="">PESQUISA AVANÇADA</a>
+    <p class="ofertas-txt">VER OFERTAS</p>
+    <a class="bt-ver-viaturas" href="">VER VIATURAS</a>
+</div>
+</header>
+<div class="comunicacao">
+    <a href="">
+    <img src="banner_desktop_marcas.jpg">
+    </a>
+    </div>
+
+    <section class="main-content">
+        <div class="pesquise-reserve">
+            <h2>PESQUISE E RESERVE ONLINE</h2>
+            <p>
+                Na <strong>Spoticar</strong>, dispomos de um vasto stock de veículos semi-novos aos quais pode aceder de forma cómoda. Pesquise e reserve on-line.
+            </p>
+            <p>
+                Agora pode optar pelo nosso serviço de <a href="">entrega em sua casa</a><sup>1</sup>. De outra forma, os nossos 80 pontos de venda estão prontos para o receber.
+            </p>
+            <p>
+                [1] Nos concessionários aderentes.
+            </p>
+        </div>
+        <div class="compromisso">
+            <h3 class="titulo-compromisso"><a href="">COMPROMISSOS DO SITE</a></h3>
+            <ul class="compromisso-content">
+                <div class="compromisso1">
+                    <li>
+                        <img class="img" src="check.png">
+                        <p>SATISFAÇÃO OU REEMBOLSO</p>
+                    </li>
+                    <li>
+                        <img class="img" src="car.png">
+                        <p>REDE DE ASSISTÊNCIA NACIONAL</p>
+                    </li>
+                </div>
+                <div class="compromisso2">
+                    <li>
+                        <img class="img" src="telephone.png">
+                        <p>ASSISTÊNCIA EM VIAGEM</p>
+                    </li>
+                    <li>
+                        <img class="img" src="calculator.png">
+                        <p>FINANCIAMENTO PERSONALIZADO</p>
+                    </li>
+                </div>
+            </ul>
+            <a class="compromisso-bt" href="" >
+                <span class="texto">VER OS NOSSOS COMPROMISSOS, AS NOSSAS GARANTIAS E AS VANTAGENS SPOTICAR PARA A COMPRA DE UM VEÍCULO ELÉTRICO OU HÍBRIDO</span>
+                <span class="bi-chevron-right"></span>
+            </a>
+            <div class="oportunidades">
+                <h2>OPORTUNIDADES SELECIONADAS POR CATEGORIA</h2> 
+                <div class="categoria-itens">
+                    <ul class="items">
+                        <li class="item1">
+                            <a href="">
+                             <img class="img" src="premium-badge.png">
+                            <h3>OPORTUNIDADES PREMIUM</h3>
+                            </a>
+                        </li>
+                        <li class="item2">
+                            <a href="">
+                                <img class="img" src="best-price.png">
+                                <h3>OPORTUNIDADES A PREÇOS BAIXOS</h3>
+                                </a>
+                        </li>
+                        <li class="item3">
+                            <a href="">
+                                <img class="img" src="dollar-coin.png">
+                                <h3>USADOS EM CAMPANHA</h3>
+                                </a>
+                        </li>
+                    </ul>
+                    <ul class="items2">
+                    <li class="item4">
+                        <a href="">
+                            <img class="img" src="box.png">
+                            <h3>COMERCIAIS USADOS</h3>
+                            </a>
+                    </li>
+                    <li class="item5">
+                        <a href="">
+                            <img class="img" src="plugue.png">
+                            <h3>OPORTUNIDADES ELÉTRICAS</h3>
+                            </a>
+                    </li>
+                    <li class="item6">
+                        <a href="">
+                            <img class="img" src="electric-car.png">
+                            <h3>OPORTUNIDADES HÍBRIDAS</h3>
+                            </a>
+                    </li>
+                    </ul>
+                </div>   
+            </div>
+            
+        </div>
+        
+    </section>
+    
+<!-- PARTE DE BAIXO-->
+<div class="ajuste">
+<div class="featuredused">
+    <div class="container" id="pagination">
+        <p class="usedtitle">USADOS EM DESTAQUE ATÉ 15.000 €</p> 
+        <div class="carrousel">
+            <div class="carrousel-nav">
+                <span class="icon-left" id="prev1"><i class="button"></i></span>
+                <span class="icon-right" id="next1"><i class="button1"></i></span>
+                <a href="" class="button-ver-tudo">VER TUDO</a>
+            </div>
+        </div>
+     <div id="page1" class="page selected">
+       <div class="firstcar">
+         <div class="button-comparar">
+            <button id="circle-button"></button>
+            <span class="comparar">COMPARAR</span>
+         </div>
+         <div onclick="abrirPagina();"> 
+            <div class="car-ft">
+              <img src="CITROEN.jpg">
+              <div class="heartcircle">
+                <img class="img" src="heart.png">
+              </div>
+            </div>
+            <div class="garantia">
+                <span class="icon-checkmark"></span>
+                <span class="text-garantia">GARANTIA 36 MESES</span>
+            </div>
+            <div class="card-content">
+                <span class="title">CITROËN C1</span>
+                <span class="sub-title">1.0 VTi 72 S&S  FEEL</span>
+                <div class="row">
+                    <div class="specifications">
+                        <li>70 885 Km | Gasolina</li>
+                        <li>02-2020 | Manual</li>
+                    </div>
+                    <div class="priceinfo">
+                        <p>11 500 €</p>
+                    </div>
+                </div>
+                <div class="consumo">
+                    <div class="WLTP">
+                        <h5>WLTP<img class="img" src="information.png"></h5>
+                    </div>
+                    <div class="consumolist">
+                        <li>Consumo misto 4.9 l/100 km</li>
+                        <li>CO₂ misto 110 g/km</li>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="adress">
+                        <img class="img" src="location-pin.png">
+                        <div class="localisation">
+                            <li>SPOTICAR STELLANTIS &YOU SETÚBAL</li>
+                            <li>SETÚBEL</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </div>
+       <div class="firstcar">
+         <div class="button-comparar">
+            <button id="circle-button1"></button>
+            <span class="comparar">COMPARAR</span>
+         </div>
+         <div onclick="abrirPagina();">  
+            <div class="car-ft">
+              <img src="PEUGEOT-108.jpg">
+              <div class="heartcircle">
+                <img class="img" src="heart.png">
+              </div>
+            </div>
+            <div class="garantia">
+                <span class="icon-checkmark"></span>
+                <span class="text-garantia">GARANTIA 36 MESES</span>
+            </div>
+            <div class="card-content">
+                <span class="title">PEUGEOT 108</span>
+                <span class="sub-title">1  1.0 VTi 72 CVM5 Style</span>
+                <div class="row">
+                    <div class="specifications">
+                        <li>44 440 Km | Gasolina</li>
+                        <li>06-2021 | Manual</li>
+                    </div>
+                    <div class="priceinfo">
+                        <p>12 900 €</p>
+                    </div>
+                </div>
+                <div class="consumo">
+                    <div class="WLTP">
+                        <h5>WLTP<img class="img" src="information.png"></h5>
+                    </div>
+                    <div class="consumolist">
+                        <li>Consumo misto 4.9 l/100 km</li>
+                        <li>CO₂ misto 110 g/km</li>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="adress">
+                        <img class="img" src="location-pin.png">
+                        <div class="localisation">
+                            <li>SPOTICAR STELLANTIS &YOU CARNAXIDE</li>
+                            <li>CARNAXIDE</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+       </div>
+       <div class="firstcar">
+         <div class="button-comparar">
+            <button id="circle-button2"></button>
+            <span class="comparar">COMPARAR</span>
+         </div>
+         <div onclick="abrirPagina();"> 
+            <div class="car-ft">
+              <img src="PEUGEOT-108(2).jpg">
+              <div class="heartcircle">
+                <img class="img" src="heart.png">
+              </div>
+            </div>
+            <div class="garantia">
+              <span class="icon-checkmark"></span>
+              <span class="text-garantia">GARANTIA 36 MESES</span>
+            </div>
+            <div class="card-content">
+              <span class="title">PEUGEOT 108</span>
+              <span class="sub-title">1  1.0 VTi 72 CVM5 Allure Top!</span>
+              <div class="row">
+                <div class="specifications">
+                    <li>15 031 Km | Gasolina</li>
+                    <li>05-2020 | Manual</li>
+                </div>
+                <div class="priceinfo">
+                    <p>14 900 €</p>
+                </div>
+              </div>
+              <div class="consumo">
+                <div class="WLTP">
+                    <h5>WLTP<img class="img" src="information.png"></h5>
+                </div>
+                <div class="consumolist">
+                    <li>Consumo misto 4.9 l/100 km</li>
+                    <li>CO₂ misto 111 g/km</li>
+                </div>
+              </div>
+              <div class="clearfix">
+                <div class="adress">
+                    <img class="img" src="location-pin.png">
+                    <div class="localisation">
+                        <li>SPOTICAR STELLANTIS &YOU CARNAXIDE</li>
+                        <li>CARNAXIDE</li>
+                    </div>
+                </div>
+              </div>
+            </div>
+         </div>
+       </div>       
+      </div>
+      <div id="page2" class="page">
+        <div class="firstcar">
+             <div class="button-comparar">
+                 <button id="circle-button3"></button>
+                 <span class="comparar">COMPARAR</span>
+             </div>
+             <div onclick="abrirPagina();"> 
+               <div class="car-ft">
+                 <img src="PEUGEOT-208.jpg">
+                 <div class="heartcircle">
+                    <img class="img" src="heart.png">
+                  </div>
+               </div>
+               <div class="garantia">
+                 <span class="icon-checkmark"></span>
+                 <span class="text-garantia">GARANTIA 36 MESES</span>
+               </div>
+               <div class="card-content">
+                 <span class="title">PEUGEOT 208</span>
+                 <span class="sub-title">1  1.2 PURETECH 82 CVM5 STYLE</span>
+                 <div class="row">
+                     <div class="specifications">
+                         <li>68 104 Km | Gasolina</li>
+                         <li>08-2017 | Manual</li>
+                     </div>
+                     <div class="priceinfo">
+                         <p>14 990 €</p>
+                     </div>
+                 </div>
+                 <div class="consumo">
+                     <div class="WLTP">
+                         <h5>NEDC<img class="img" src="information.png"></h5>
+                     </div>
+                     <div class="consumolist">
+                         <li>CO₂ misto 110 g/km</li>
+                         <div class="energetic">
+                            <img src="energy-B.png">
+                         </div>
+                     </div>
+                 </div>
+                 <div class="clearfix">
+                     <div class="adress">
+                        <img class="img" src="location-pin.png">
+                         <div class="localisation">
+                             <li>SPOTICAR SANTOGAL LISBOA REP</li>
+                             <li>LISBOA</li>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             </div>
+        </div>
+        <div class="firstcar">
+             <div class="button-comparar">
+                 <button id="circle-button4"></button>
+                 <span class="comparar">COMPARAR</span>
+             </div>
+             <div onclick="abrirPagina();"> 
+             <div class="car-ft">
+               <img src="FIAT-500(2).jpg">
+               <div class="heartcircle">
+                <img class="img" src="heart.png">
+               </div>
+             </div>
+             <div class="garantia">
+                 <span class="icon-checkmark"></span>
+                 <span class="text-garantia">GARANTIA 36 MESES</span>
+             </div>
+             <div class="card-content">
+                 <span class="title">FIAT 500</span>
+                 <span class="sub-title">2 1.2 8v 69cv  Lounge</span>
+                 <div class="row">
+                     <div class="specifications">
+                         <li>68 632 Km | Gasolina</li>
+                         <li>01-2019 | Manual</li>
+                     </div>
+                     <div class="priceinfo">
+                         <p>14 950 €</p>
+                     </div>
+                 </div>
+                 <div class="consumo">
+                     <div class="WLTP">
+                         <h5>NEDC<img class="img" src="information.png"></h5>
+                     </div>
+                     <div class="consumolist">
+                         <li>CO₂ misto 104 g/km</li>
+                         <div class="energetic">
+                            <img src="energy-B.png">
+                         </div>
+                     </div>
+                 </div>
+                 <div class="clearfix">
+                     <div class="adress">
+                        <img class="img" src="location-pin.png">
+                         <div class="localisation">
+                             <li>SPOTICAR AMATOSCAR ÉVORA</li>
+                             <li>ÉVORA</li>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             </div>
+        </div>
+        <div class="firstcar">
+         <div class="button-comparar">
+             <button id="circle-button5"></button>
+             <span class="comparar">COMPARAR</span>
+         </div>
+         <div onclick="abrirPagina();"> 
+           <div class="car-ft">
+             <img src="PEUGEOT-108(1).jpg">
+             <div class="heartcircle">
+                <img class="img" src="heart.png">
+             </div>
+           </div>
+           <div class="garantia">
+             <span class="icon-checkmark"></span>
+             <span class="text-garantia">GARANTIA 36 MESES</span>
+           </div>
+           <div class="card-content">
+             <span class="title">PEUGEOT 108</span>
+             <span class="sub-title">1  1.0 VTi 72 CVM5 Style</span>
+             <div class="row">
+                 <div class="specifications">
+                     <li>35 335 Km | Gasolina</li>
+                     <li>06-2021 | Manual</li>
+                 </div>
+                 <div class="priceinfo">
+                     <p>13 980 €</p>
+                 </div>
+             </div>
+             <div class="consumo">
+                 <div class="WLTP">
+                     <h5>WLTP<img class="img" src="information.png"></h5>
+                 </div>
+                 <div class="consumolist">
+                     <li>Consumo misto 4.9 l/100 km</li>
+                     <li>CO₂ misto 110 g/km</li>
+                     <div class="energetic">
+                        <img src="energy-A.png" height="5px">
+                     </div>
+                 </div>
+             </div>
+             <div class="clearfix">
+                 <div class="adress">
+                    <img class="img" src="location-pin.png">
+                     <div class="localisation">
+                         <li>SPOTICAR AUTÓMOVEIS DO MONDEGO COIMBRA</li>
+                         <li>COIMBRA</li>
+                     </div>
+                 </div>
+             </div>
+            </div>
+         </div> 
+        </div>       
+       </div>
+       <div id="page3" class="page">
+        <div class="firstcar">
+             <div class="button-comparar">
+                 <button id="circle-button6"></button>
+                 <span class="comparar">COMPARAR</span>
+             </div>
+             <div onclick="abrirPagina();"> 
+               <div class="car-ft">
+                 <img src="PEUGEOT-208(1).jpg">
+                 <div class="heartcircle">
+                    <img class="img" src="heart.png" >
+                 </div>
+               </div>
+               <div class="garantia">
+                 <span class="icon-checkmark"></span>
+                 <span class="text-garantia">GARANTIA 36 MESES</span>
+               </div>
+               <div class="card-content">
+                 <span class="title">PEUGEOT 208</span>
+                 <span class="sub-title">1  1.6 BlueHDi 75 CVM5 Style</span>
+                 <div class="row">
+                     <div class="specifications">
+                         <li>96 572 Km | Diesel</li>
+                         <li>02-2018 | Manual</li>
+                     </div>
+                     <div class="priceinfo">
+                         <p>14 990 €</p>
+                     </div>
+                 </div>
+                 <div class="consumo">
+                     <div class="WLTP">
+                         <h5>NEDC<img class="img" src="information.png"></h5>
+                     </div>
+                     <div class="consumolist">
+                         <li>Consumo misto 3.5 l/100 km</li>
+                         <li>CO₂ misto 90 g/km</li>
+                         <div class="energetic">
+                            <img src="energy-A.png">
+                         </div>
+                     </div>
+                 </div>
+                 <div class="clearfix">
+                     <div class="adress">
+                        <img class="img" src="location-pin.png">
+                         <div class="localisation">
+                             <li>SPOTICAR FILINTO MOTA GUIMARÃES</li>
+                             <li>GUIMARÃES</li>
+                         </div>
+                     </div>
+                 </div>
+                </div>
+             </div>
+        </div>
+        <div class="firstcar">
+             <div class="button-comparar">
+                 <button id="circle-button7"></button>
+                 <span class="comparar">COMPARAR</span>
+             </div>
+             <div onclick="abrirPagina();"> 
+               <div class="car-ft">
+                 <img src="PEUGEOT-108(3).jpg">
+                 <div class="heartcircle">
+                    <img class="img" src="heart.png">
+                 </div>
+               </div>
+               <div class="garantia">
+                 <span class="icon-checkmark"></span>
+                 <span class="text-garantia">GARANTIA 36 MESES</span>
+               </div>
+               <div class="card-content">
+                 <span class="title">PEUGEOT 108</span>
+                 <span class="sub-title">1  1.0 VTi 72 CVM5 Style</span>
+                 <div class="row">
+                     <div class="specifications">
+                         <li>42 379 Km | Gasolina</li>
+                         <li>06-2021 | Manual</li>
+                     </div>
+                     <div class="priceinfo">
+                         <p>13 950 €</p>
+                     </div>
+                 </div>
+                 <div class="consumo">
+                     <div class="WLTP">
+                         <h5>WLTP<img class="img" src="information.png"></h5>
+                     </div>
+                     <div class="consumolist">
+                         <li>Consumo misto 4.9 l/100 km</li>
+                         <li>CO₂ misto 110 g/km</li>
+                         <div class="energetic">
+                            <img src="energy-A.png">
+                         </div>
+                     </div>
+                 </div>
+                 <div class="clearfix">
+                     <div class="adress">
+                        <img class="img" src="location-pin.png">
+                         <div class="localisation">
+                             <li>SPOTICAR CARDAN BRAGA</li>
+                             <li>BRAGA</li>
+                         </div>
+                     </div>
+                 </div>
+                </div>
+             </div>
+        </div>
+        <div class="firstcar">
+         <div class="button-comparar">
+             <button id="circle-button8"></button>
+             <span class="comparar">COMPARAR</span>
+         </div>
+         <div onclick="abrirPagina();"> 
+           <div class="car-ft">
+             <img src="CITROEN-C4.jpg">
+             <div class="heartcircle">
+                <img class="img" src="heart.png">
+             </div>
+           </div>
+           <div class="garantia">
+             <span class="icon-checkmark"></span>
+             <span class="text-garantia">GARANTIA 36 MESES</span>
+           </div>
+           <div class="card-content">
+             <span class="title">CITRÖEN</span>
+             <span class="sub-title">1.6 BlueHDi 100  FEEL</span>
+             <div class="row">
+                 <div class="specifications">
+                     <li>116 195 Km | Diesel</li>
+                     <li>03-2016 | Manual</li>
+                 </div>
+                 <div class="priceinfo">
+                     <p>14 500 €</p>
+                 </div>
+             </div>
+             <div class="consumo">
+                 <div class="WLTP">
+                     <h5>NEDC<img class="img" src="information.png"></h5>
+                 </div>
+                 <div class="consumolist">
+                     <li>Consumo misto 3.3 l/100 km</li>
+                     <li>CO₂ misto 111 g/km</li>
+                     <div class="energetic">
+                        <img src="energy-A.png">
+                     </div>
+                 </div>
+             </div>
+             <div class="clearfix">
+                 <div class="adress">
+                    <img class="img" src="location-pin.png">
+                     <div class="localisation">
+                         <li>SPOTICAR AUTO BENFICA LISBOA</li>
+                         <li>AMADORA</li>
+                     </div>
+                 </div>
+             </div>
+         </div>
+        </div> 
+        </div>       
+       </div>
+      <div id="carousek-indicators">
+        <li id=" 1 " class=" page-button "></li>
+        <li id=" 2 " class=" page-button "></li>
+        <li id=" 3 " class=" page-button "></li>
+      </div>
+    </div>
+</div>
+<div class="suvusado">
+    <img src="SUV1.jpg">
+      <div class="TextInTheBackgroundWithCars">
+        <a href=" "><h3>O SEU SUV USADO:</h3></a>
+        <p>COMO ESCOLHER BEM O SEU SUV USADO.</p>
+      </div>
+      <a class="buttonleiamais" href=" ">LEIA MAIS</a>
+</div>
+<div class="melhoroferta">
+    <img src="OccasionsSpoticar.jpg">
+        <div class="textonchildbackground">
+            <a href=" "><h3>PARA CONSEGUIR ENCONTRAR A MELHOR OFERTA, SIGA OS NOSSOS CONSELHOS PARA A COMPRA!</h3></a>
+        </div>
+        <a class="buttonleiamais" href=" ">LEIA MAIS</a>
+    </div>
+</div>
+<div class="graybackground">
+    <div class="descubratambem">
+        <div class="titulodescubratambem">
+          <h2>DESCUBRA TAMBÉM...</h2>
+        </div>
+       <div class="categorias">
+          <ul>
+           <li><p id="titulodascategorias">Categorias</p></li> 
+           <li><a href=" ">SUVs e 4x4</a></li> 
+           <li><a href=" ">Carrinhas</a></li> 
+           <li><a href=" ">Berlinas</a></li> 
+           <li><a href=" ">Familiares</a></li>
+           <li><a href=" ">Citadinos</a></li>
+           <div class="dropdownmenu1 vermaishide1" >
+            <li><a href=" ">Monovolumes</a></li>
+            <li><a href=" ">Coupé e Cabriolet</a></li>
+            <li><a href=" ">Pick-ups</a></li>
+           </div>
+        <div class="vermais"><a id="boxButton">Ver mais</a><span class="iconbutton1"></span>
+            <div class="boxIcon Icon">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+          </ul>
+          <ul>
+              <li><p id="titulodascategorias">Características</p></li> 
+              <li><a href=" ">Usados com 4 rodas motrizes</a></li> 
+              <li><a href=" ">Usados com 7 lugares</a></li> 
+              <li><a href=" ">Usados Híbridos</a></li> 
+              <li><a href=" ">Usados Elétricos</a></li>
+              <li><a href=" ">Usados com mudanças automáticas</a></li>
+          </ul>
+          <ul>
+              <li><p id="titulodascategorias">Outros</p></li> 
+              <li><a href=" ">Usados premium</a></li> 
+              <li><a href=" ">Usados recentes</a></li> 
+              <li><a href=" ">Usados a menos de 15000€</a></li> 
+              <li><a href=" ">Usados a menos de 20000€</a></li>
+          </ul>
+        </div>
+      </div>
+    <div class="pesquisarporlocalização">
+      <div class="titulopesquisarporlocalização">
+        <h2>PESQUISAR POR LOCALIZAÇÃO</h2>
+      </div>
+     <div class="regiões">
+        <ul>
+         <li><p id="titulodasregioes">Regiões</p></li> 
+         <li><a href=" ">Norte</a></li> 
+         <li><a href=" ">Centro</a></li> 
+         <li><a href=" ">Sul</a></li> 
+         <li><a href=" ">Madeira</a></li>
+         <li><a href=" ">Açores</a></li> 
+        </ul>
+        <ul>
+            <li><p id="titulodasregioes">Regiões</p></li> 
+            <li><a href=" ">Grande Lisboa</a></li> 
+            <li><a href=" ">Grande Porto</a></li> 
+            <li><a href=" ">Alentejo</a></li> 
+            <li><a href=" ">Algarve</a></li>
+        </ul>
+        <ul>
+            <li><p id="titulodasregioes">Cidades</p></li> 
+            <li><a href=" ">Porto</a></li> 
+            <li><a href=" ">Lisboa</a></li> 
+            <li><a href=" ">Coimbra</a></li> 
+            <li><a href=" ">Almada</a></li>
+            <li><a href=" ">Santarém</a></li>
+            <div class="dropdownmenu vermaishide" >
+                <li><a href=" ">Faro</a></li>
+           </div>
+        <div class="vermais1"><a id="boxButton1">Ver mais</a><span class="iconbutton"></span>
+          <div class="boxIcon1 Icon1">
+              <div class="square1"></div>
+              <div class="square1"></div>
+              <div class="square1"></div>
+              <div class="square1"></div>
+              <div class="square1"></div>
+              <div class="square1"></div>
+              <div class="square1"></div>
+              <div class="square1"></div>
+              <div class="square1"></div>
+          </div>
+        </div>
+        </ul>
+      </div>
+    </div>
+</div>
+<footer>
+   <div class="todasasmarcas">
+        <p class="titulomarcas">MARCAS</p>
+      <div class="marcascima">
+        <ul>
+            <li>
+                <a onclick="openWeb();" >
+                    <p id="titulos" class="buttonopelusados">
+                        OPEL USADOS
+                        <span class="icon-button17"></span>
+                        <span class="boxIcon2 Icon2">
+                            <span class="square2"></span>
+                            <span class="square2"></span>
+                            <span class="square2"></span>
+                            <span class="square2"></span>
+                            <span class="square2"></span>
+                            <span class="square2"></span>
+                            <span class="square2"></span>
+                            <span class="square2"></span>
+                            <span class="square2"></span>
+                        </span>
+                    </p> 
+                </a>
+            </li>
+              <div class="dropdown_menu17 hide17">
+                <li><a href=" ">Corsa</a></li>
+                <li><a href=" ">Astra</a></li>
+                <li><a href=" ">Grandland</a></li>
+                <li><a href=" ">Crossland</a></li>
+                <li><a href=" ">Insignia</a></li>
+                <li><a href=" ">Mokka</a></li>
+              <div class="dropdown_menu5 hide5" >
+                <li class="footer-list-item"><a href=" ">Zafira</a></li>
+                <li class="footer-list-item"><a href=" ">Combo</a></li>
+                <li class="footer-list-item"><a href=" ">Adam</a></li>
+                <li class="footer-list-item"><a href=" ">Karl</a></li>
+                <li class="footer-list-item"><a href=" ">VIVARO</a></li>
+              </div>
+              </div>
+            
+                <a class="dropdown_outros5">Outros Modelos<span class="icon-button5 drop-rotate5"></span></a> 
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos" class="buttoncitroenusados">
+                        CITRÖEN USADOS
+                        <span class="icon-button16"></span>
+                        <span class="boxIcon3 Icon3">
+                            <span class="square3"></span>
+                            <span class="square3"></span>
+                            <span class="square3"></span>
+                            <span class="square3"></span>
+                            <span class="square3"></span>
+                            <span class="square3"></span>
+                            <span class="square3"></span>
+                            <span class="square3"></span>
+                            <span class="square3"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu16 hide16">
+                <li><a href=" ">C4</a></li>
+                <li><a href=" ">C5 Aircross</a></li>
+                <li><a href=" ">C3</a></li>
+                <li><a href=" ">C3 Aircross</a></li>
+                <li><a href=" ">C4 Cactus</a></li>
+                <li><a href=" ">C4 Grand SpaceTourer</a></li>
+             <div class="dropdown_menu4 hide4" >
+                <li class="footer-list-item"><a href=" ">Berlingo</a></li>
+                <li class="footer-list-item"><a href=" ">C1</a></li>
+                <li class="footer-list-item"><a href=" ">C5</a></li>
+                <li class="footer-list-item"><a href=" ">C-Elysee</a></li>
+                <li class="footer-list-item"><a href=" ">C4 Aircross</a></li>
+                <li class="footer-list-item"><a href=" ">C4 SpaceTourer</a></li>
+             </div>
+            </div>
+                <a class="dropdown_outros4">Outros Modelos<span class="icon-button4 drop-rotate4"></span></a>
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos"class="buttonpeugeotusados"> 
+                          PEUGEOT USADOS
+                        <span class="icon-button15"></span>
+                        <span class="boxIcon4 Icon4">
+                            <span class="square4"></span>
+                            <span class="square4"></span>
+                            <span class="square4"></span>
+                            <span class="square4"></span>
+                            <span class="square4"></span>
+                            <span class="square4"></span>
+                            <span class="square4"></span>
+                            <span class="square4"></span>
+                            <span class="square4"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu15 hide15">
+                <li><a href=" ">308</a></li>
+                <li><a href=" ">208</a></li>
+                <li><a href=" ">2008</a></li>
+                <li><a href=" ">3008</a></li>
+                <li><a href=" ">108</a></li>
+                <li><a href=" ">508</a></li>
+             <div class="dropdown_menu3 hide3" >
+                <li class="footer-list-item"><a href=" ">5008</a></li>
+                <li class="footer-list-item"><a href=" ">Partner</a></li>
+                <li class="footer-list-item"><a href=" ">Boxer</a></li>
+                <li class="footer-list-item"><a href=" ">Fiorino</a></li>
+             </div>
+            </div>
+                <a class="dropdown_outros3">Outros Modelos<span class="icon-button3 drop-rotate3"></span></a>
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();" >
+                    <p id="titulos" class="buttondsautomobilesusados">
+                          DS AUTOMOBILES USADOS
+                        <span class="icon-button14"></span>
+                        <span class="boxIcon5 Icon5">
+                            <span class="square5"></span>
+                            <span class="square5"></span>
+                            <span class="square5"></span>
+                            <span class="square5"></span>
+                            <span class="square5"></span>
+                            <span class="square5"></span>
+                            <span class="square5"></span>
+                            <span class="square5"></span>
+                            <span class="square5"></span>
+                        </span>
+                    </p>
+                </a>
+          </li>
+          <div class="dropdown_menu14 hide14">
+            <li><a href=" ">DS 7 Crossback</a></li>
+            <li><a href=" ">DS 3 Crossback</a></li>
+            <li><a href=" ">DS 9</a></li>
+          </div>
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos"class="buttonfiatusados">
+                          FIAT USADOS
+                        <span class="icon-button13"></span>
+                        <span class="boxIcon6 Icon6">
+                            <span class="square6"></span>
+                            <span class="square6"></span>
+                            <span class="square6"></span>
+                            <span class="square6"></span>
+                            <span class="square6"></span>
+                            <span class="square6"></span>
+                            <span class="square6"></span>
+                            <span class="square6"></span>
+                            <span class="square6"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu13 hide13">
+                <li><a href=" ">500</a></li>
+                <li><a href=" ">Tipo</a></li>
+                <li><a href=" ">500X</a></li>
+                <li><a href=" ">Punto</a></li>
+                <li><a href=" ">Doblo</a></li>
+                <li><a href=" ">Panda</a></li>
+             <div class="dropdown_menu2 hide2" >
+                <li class="footer-list-item"><a href=" ">500L</a></li>
+                <li class="footer-list-item"><a href=" ">Talento</a></li>
+                <li class="footer-list-item"><a href=" ">Ducato</a></li>
+                <li class="footer-list-item"><a href=" ">Fiorino</a></li>
+             </div>
+            </div>
+                <a class="dropdown_outros2">Outros Modelos<span class="icon-button2 drop-rotate2"></span></a>
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos"class="buttonvolkswagen">
+                          VOLKSWAGEN
+                        <span class="icon-button12"></span>
+                        <span class="boxIcon7 Icon7">
+                            <span class="square7"></span>
+                            <span class="square7"></span>
+                            <span class="square7"></span>
+                            <span class="square7"></span>
+                            <span class="square7"></span>
+                            <span class="square7"></span>
+                            <span class="square7"></span>
+                            <span class="square7"></span>
+                            <span class="square7"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu12 hide12">
+                <a class="semresultados">Sem resultados</a>
+            </div>
+        </ul>
+    
+    </div>
+    <div class="marcasbaixo">
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos"class="buttonrenault">
+                          RENAULT
+                        <span class="icon-button11"></span>
+                        <span class="boxIcon8 Icon8">
+                            <span class="square8"></span>
+                            <span class="square8"></span>
+                            <span class="square8"></span>
+                            <span class="square8"></span>
+                            <span class="square8"></span>
+                            <span class="square8"></span>
+                            <span class="square8"></span>
+                            <span class="square8"></span>
+                            <span class="square8"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu11 hide11">
+                <li><a href=" ">Grand Scenic</a></li>
+                <li><a href=" ">Captur</a></li>
+                <li><a href=" ">Clio</a></li>
+                <li><a href=" ">Kadjer</a></li>
+                <li><a href=" ">Megane</a></li>
+                <li><a href=" ">Scenic</a></li>
+            </div>
+
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos"class="buttonnissan">
+                          NISSAN
+                        <span class="icon-button10"></span>
+                        <span class="boxIcon9 Icon9">
+                            <span class="square9"></span>
+                            <span class="square9"></span>
+                            <span class="square9"></span>
+                            <span class="square9"></span>
+                            <span class="square9"></span>
+                            <span class="square9"></span>
+                            <span class="square9"></span>
+                            <span class="square9"></span>
+                            <span class="square9"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu10 hide10">
+               <li><a href=" ">Qashqai</a></li>
+               <li><a href=" ">Juke</a></li>
+               <li><a href=" ">X-Trail</a></li>
+            </div>
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos"class="buttonkia">
+                        KIA
+                        <span class="icon-button9"></span>
+                        <span class="boxIcon10 Icon10">
+                            <span class="square10"></span>
+                            <span class="square10"></span>
+                            <span class="square10"></span>
+                            <span class="square10"></span>
+                            <span class="square10"></span>
+                            <span class="square10"></span>
+                            <span class="square10"></span>
+                            <span class="square10"></span>
+                            <span class="square10"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu9 hide9">
+               <li><a href=" ">Cee'D</a></li>
+               <li><a href=" ">Sportage</a></li>
+               <li><a href=" ">Carens</a></li>
+               <li><a href=" ">Niro</a></li>
+               <li><a href=" ">Picento</a></li>
+               <li><a href=" ">Rio</a></li>
+               <div class="dropdown_menu1 hide1" >
+                    <li class="footer-list-item"><a href=" ">Stonic</a></li>
+               </div>
+            </div>
+                <a class="dropdown_outros1">Outros Modelos<span class="icon-button1 drop-rotate1"></span></a>
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos"class="buttonford">
+                          FORD
+                        <span class="icon-button8"></span>
+                        <span class="boxIcon11 Icon11">
+                            <span class="square11"></span>
+                            <span class="square11"></span>
+                            <span class="square11"></span>
+                            <span class="square11"></span>
+                            <span class="square11"></span>
+                            <span class="square11"></span>
+                            <span class="square11"></span>
+                            <span class="square11"></span>
+                            <span class="square11"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu8 hide8">
+                <li><a href=" ">Fiesta</a></li>
+                <li><a href=" ">Tourneo</a></li>
+            </div>
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos"class="buttonseat">
+                        SEAT
+                        <span class="icon-button7"></span>
+                        <span class="boxIcon12 Icon12">
+                            <span class="square12"></span>
+                            <span class="square12"></span>
+                            <span class="square12"></span>
+                            <span class="square12"></span>
+                            <span class="square12"></span>
+                            <span class="square12"></span>
+                            <span class="square12"></span>
+                            <span class="square12"></span>
+                            <span class="square12"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu7 hide7">
+               <li><a href=" ">Leon</a></li>
+               <li><a href=" ">Ateca</a></li>
+               <li><a href=" ">Arona</a></li>
+               <li><a href=" ">Ibiza</a></li>
+            </div>
+        </ul>
+        <ul>
+            <li>
+                <a onclick="openWeb();">
+                    <p id="titulos"class="buttonoutrasmarcas">
+                          OUTRAS MARCAS
+                        <span class="icon-button6"></span>
+                        <span class="boxIcon13 Icon13">
+                            <span class="square13"></span>
+                            <span class="square13"></span>
+                            <span class="square13"></span>
+                            <span class="square13"></span>
+                            <span class="square13"></span>
+                            <span class="square13"></span>
+                            <span class="square13"></span>
+                            <span class="square13"></span>
+                            <span class="square13"></span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <div class="dropdown_menu6 hide6">
+                <li><a href=" ">JEEP</a></li>
+                <li><a href=" ">HYUNDAI</a></li>
+                <li><a href=" ">MAZDA</a></li>
+                <li><a href=" ">MITSUBISHI</a></li>
+                <li><a href=" ">BMW</a></li>
+                <li><a href=" ">ALFA ROMEO</a></li>
+                <div class="dropdown_menu hide" >
+                    <li class="footer-list-item"><a href=" ">MINI</a></li>
+                    <li class="footer-list-item"><a href=" ">TOYOTA</a></li>
+                    <li class="footer-list-item"><a href=" ">ABARTH</a></li>
+                    <li class="footer-list-item"><a href=" ">AUDI</a></li>
+                    <li class="footer-list-item"><a href=" ">BMW</a></li>
+                </div>
+            </div>
+               <button class="dropdown_button">VER TUDO<span class="icon-button drop-rotate"></span></button>
+        </ul>
+    </div>
+    <div class="informação">
+        <ul>
+            <li><a href=" ">Mapa do site</a></li> 
+            <li><a href=" ">Mapa do site retoma</a></li> 
+            <li><a href=" ">DS Certified</a></li>
+            <li><a href=" ">Opel Usados Certificados</a></li> 
+            <li><a href=" ">Resolução de litígios</a></li> 
+            <li><a href=" ">Menções Legais</a></li> 
+            <li><a href=" ">Consentimento de cookies</a></li> 
+            <li><a href=" ">Política de Cookies</a></li> 
+            <li><a href=" ">Política de Privacidade</a></li> 
+        </ul>
+    </div>
+   </div>  
+    <p class="copyright">© 2022 Spoticar. Todos os direitos reservados.</p>
+</footer>
+</div>
+<script src="logica.js"></script>
+</body>
+</html>
